@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>{{title}}</title>
+		<link>{{self_link}}/</link>
+		<description>{{description}}</description>
+		<language>en</language>
+		<lastBuildDate>{{build_date}}</lastBuildDate>
+		<generator>http://squarefeed.appspot.com/</generator>
+		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+		<atom:link href="{{self_link}}" rel="self" type="application/rss+xml" />
+		{% for item in items %}
+		<item>
+			<title>{{item.title}}</title>
+			<description><![CDATA[<a href="{{item.link}}"><img border=0 src="{{item.image_src}}"></a>]]></description>
+			<link>{{item.link}}</link>
+			<guid isPermaLink="false">{{item.guid}}</guid>
+			<pubDate>{{item.date}}</pubDate>
+		</item>
+		{% endfor %}
+	</channel>
+</rss>
