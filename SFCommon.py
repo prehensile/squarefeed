@@ -13,7 +13,6 @@ class SFInstagramAPI(InstagramAPI):
 		client_id = "some Instagram API client id"
 		client_secret = "some Instagram API client secret"
 		redirect_uri = "http://some.url/oauth_handler"
-		# redirect_uri = "http://localhost:8081/oauth_handler"
 		super( SFInstagramAPI, self ).__init__( client_id=client_id,
 												client_secret=client_secret,
 												redirect_uri=redirect_uri,
